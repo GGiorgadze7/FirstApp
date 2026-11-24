@@ -1,0 +1,22 @@
+﻿@page
+@model FirstApp.Pages.CarPageModel
+@{
+}
+
+@if(Model.Cars.Count() == 0)
+{
+	<h1>Car not found</h1>
+} else
+{
+	@foreach (var cars in Model.Cars)
+	{
+		<ul>
+			<li>
+				@cars.GetFullInfo()
+			</li>
+
+
+		</ul>
+	}
+
+}
